@@ -199,7 +199,7 @@
         try {
             con = DatabaseConnection.getConnection();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM products");
+            ResultSet rs = st.executeQuery("SELECT * FROM products WHERE quantity > 0");
             while (rs.next()) {
     %>
     <div class="product-card">
